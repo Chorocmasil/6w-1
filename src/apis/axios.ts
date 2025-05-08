@@ -18,7 +18,7 @@ export const axiosInstance = axios.create({
 // 요청 인터셉터: 모든 API 요청이 서버로 전송되기 전에 실행됩니다.
 axiosInstance.interceptors.request.use(
     (config ) => { // 요청 설정을 인자로 받는 콜백 함수입니다.
- // useLocalStorage 훅을 사용하여 로컬 스토리지에서 아이템을 가져오는 함수(getItem)를 가져옵니다. (주의: 훅 호출 위치)
+ // useLocalStorage 훅을 사용하여 로컬 스토리지에서 아이템을a 가져오는 함수(getItem)를 가져옵니다. (주의: 훅 호출 위치)
  const { getItem } = useLocalStorage(LOCAL_STORAGE_KEY.accessToken);
  const accessToken = getItem(); // 로컬 스토리지에서 현재 Access Token 값을 가져옵니다.
  

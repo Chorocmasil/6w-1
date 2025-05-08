@@ -2,6 +2,7 @@
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import NavBar from "../../components/NavBar";
+import Footer from "../../components/footer";
 
 const ProtectedLayout = () => {
  const { accessToken } = useAuth();
@@ -17,7 +18,7 @@ const ProtectedLayout = () => {
       <main className='flex-1' style={{paddingTop: '64px'}}>
         <Outlet />
       </main>
-      <footer>This is footer</footer>
+      <Footer />
     </div>
  );
 };
