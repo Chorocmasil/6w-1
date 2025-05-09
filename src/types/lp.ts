@@ -1,4 +1,4 @@
-import { CursorBaseResponse } from "./common.ts";
+import { CusorBaseResponse } from "./common.ts";
 
 export type Tag = {
     id: number;
@@ -11,17 +11,17 @@ export type Likes={
     lpId: number;
 }
 
-export type ResponseLpListDto = CursorBaseResponse<{
-    data:{
-        id: number,
-        title: string,
-        content: string,
-        thumbnail: string,
-        published: boolean,
-        authorID: number,
-        createdAt: Date,
-        updatedAt: Date;
-        tags: Tag[];
-        likes: Likes[];
-    }[];
-}>;
+export type Lp = {
+    id: number,
+    title: string,
+    content: string,
+    thumbnail: string,
+    published: boolean,
+    authorID: number,
+    createdAt: Date,
+    updatedAt: Date;
+    tags: Tag[];
+    likes: Likes[];
+}
+
+export type ResponseLpListDto = CusorBaseResponse<Lp[]>;
